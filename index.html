@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0">
+<meta name="theme-color" content="#FF5A52">
+<title>আখৰ ঘৰ</title>
+<meta name="description" content="শিশুৰ বাবে অসমীয়া ভাষা শিকাৰ ঘৰ">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700;800&family=Noto+Sans+Bengali:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="loadOverlay">
+  <div class="load-dots">⎔ ⎔ ⎔</div>
+  <div class="load-text">আখৰ ঘৰ লোড হৈ আছে...</div>
+  <div class="load-credit">Developed by বিকি</div>
+</div>
+
+<div id="appRoot">
+
+  <header class="app-header">
+    <button class="icon-btn" id="menuBtn" aria-label="মেনু">☰</button>
+    <span class="app-logo">অ</span>
+    <span class="app-title">আখৰ ঘৰ</span>
+    <button class="icon-btn" id="muteBtn" aria-label="শব্দ">🔊</button>
+  </header>
+
+  <main id="screen" class="screen" role="main"></main>
+
+  <nav class="bottom-nav" role="navigation" aria-label="মূল নেভিগেচন">
+    <button class="nav-btn active" data-route="home"><span class="nav-icon">🏠</span>ঘৰ</button>
+    <button class="nav-btn" data-route="learn"><span class="nav-icon">📖</span>শিকা</button>
+    <button class="nav-btn" data-route="profile"><span class="nav-icon">👤</span>মই</button>
+    <button class="nav-btn" data-route="games"><span class="nav-icon">🎮</span>খেল</button>
+  </nav>
+
+</div>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-panel">
+    <button class="icon-btn drawer-close" id="drawerClose">✕</button>
+    <h3>আখৰ ঘৰ</h3>
+    <a href="#" onclick="go('home');document.getElementById('drawer').classList.remove('open');return false;">🏠 ঘৰ</a>
+    <a href="#" onclick="go('vowels');document.getElementById('drawer').classList.remove('open');return false;">🔤 স্বৰবৰ্ণ</a>
+    <a href="#" onclick="go('consonants');document.getElementById('drawer').classList.remove('open');return false;">🔠 ব্যঞ্জনবৰ্ণ</a>
+    <a href="#" onclick="go('numbers');document.getElementById('drawer').classList.remove('open');return false;">🔢 সংখ্যা</a>
+    <a href="admin/index.html">⚙ প্ৰশাসক পেনেল</a>
+    <a href="about.html">ℹ আমাৰ বিষয়ে</a>
+    <a href="privacy.html">🔒 গোপনীয়তা নীতি</a>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/app.js"></script>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const o = document.getElementById('loadOverlay');
+      o.style.transition = 'opacity .4s ease';
+      o.style.opacity = '0';
+      setTimeout(() => o.remove(), 400);
+    }, 600);
+  });
+  document.body.addEventListener('click', () => AudioEngine.unlock(), { once: true });
+</script>
+</body>
+</html>
