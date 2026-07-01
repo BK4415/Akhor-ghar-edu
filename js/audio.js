@@ -35,7 +35,7 @@ const AudioEngine = (() => {
         speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(text);
         // Closest widely-supported voice; real Assamese audio should replace this.
-        u.lang = 'bn-IN';
+        u.lang = 'as-IN';
         u.rate = 0.82;
         u.pitch = 1.05;
         u.onend = resolve;
