@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>প্ৰশাসক পেনেল — আখৰ ঘৰ</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="loginScreen" class="admin-wrap">
+  <div class="login-card">
+    <div class="login-logo">অ</div>
+    <h1>প্ৰশাসক পেনেল</h1>
+    <p class="login-sub">আখৰ ঘৰ কনটেন্ট ব্যৱস্থাপনা</p>
+    <input id="loginUser" type="text" placeholder="Username" autocomplete="username">
+    <input id="loginPass" type="password" placeholder="Password" autocomplete="current-password">
+    <button id="loginBtn">প্ৰৱেশ কৰক</button>
+    <div id="loginError" class="login-error"></div>
+    <a class="login-back" href="../index.html">← এপ্লিকেশ্যনলৈ উভতি যাওক</a>
+  </div>
+</div>
+
+<div id="dashScreen" class="admin-wrap" style="display:none">
+  <header class="admin-header">
+    <span class="admin-title">⚙ প্ৰশাসক ড্যাশবৰ্ড</span>
+    <button id="logoutBtn" class="admin-logout">প্ৰস্থান</button>
+  </header>
+
+  <div class="admin-tabs">
+    <button class="tab-btn active" data-tab="audio">🎵 অডিঅ' আপলোড</button>
+    <button class="tab-btn" data-tab="image">🖼 ছবি আপলোড</button>
+    <button class="tab-btn" data-tab="words">📝 শব্দ সম্পাদক</button>
+    <button class="tab-btn" data-tab="grammar">📚 ব্যাকৰণ সম্পাদক</button>
+  </div>
+
+  <div id="tab-audio" class="tab-panel"></div>
+  <div id="tab-image" class="tab-panel" style="display:none"></div>
+  <div id="tab-words" class="tab-panel" style="display:none"></div>
+  <div id="tab-grammar" class="tab-panel" style="display:none"></div>
+
+  <div class="admin-note">
+    ⚠ এইটো এটা স্থানীয় ডেমো CMS (ব্ৰাউজাৰৰ localStorage ব্যৱহাৰ কৰি)। এইখিনি সলনি কেৱল আপোনাৰ এই ব্ৰাউজাৰতে দেখা যাব।
+    প্ৰকৃত বহু-ব্যৱহাৰকাৰী প্ৰডাকশ্যন CMS ৰ বাবে Node/Express + SQLite ব্যাকএণ্ড লাগিব (README চাওক)।
+  </div>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
