@@ -1,5 +1,5 @@
 /* আখৰ ঘৰ — Service Worker (app-shell offline cache) */
-const CACHE = 'akhor-ghor-v1';
+const CACHE = 'akhor-ghor-v2';
 const SHELL = [
   './',
   './index.html',
@@ -7,7 +7,8 @@ const SHELL = [
   './js/data.js',
   './js/audio.js',
   './js/app.js',
-  './manifest.json',
+  './manifest.json'
+  './offline.html',
 ];
 
 self.addEventListener('install', (e) => {
