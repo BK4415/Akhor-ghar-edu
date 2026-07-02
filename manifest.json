@@ -2,26 +2,15 @@
   "name": "আখৰ ঘৰ",
   "short_name": "আখৰ ঘৰ",
   "description": "শিশুৰ বাবে অসমীয়া ভাষা শিকাৰ ঘৰ",
-  "id": "/",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#FDF6E4",
   "theme_color": "#FF5A52",
   "lang": "as-IN",
   "icons": [
-    {
-      "src": "/assets/icons/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
   ]
 }
